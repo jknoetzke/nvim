@@ -6,4 +6,5 @@ local map = vim.api.nvim_set_keymap
 -- Toggle more plugins
 map('n', 't', [[:TagbarToggle]], {})
 map('n', 'ff', [[:Telescope find_files]], {})
-map('n', 'gg', [[:Telescope live_grep]], {})
+map('n', 'fg', [[:Telescope live_grep]], {})
+map('n', 'fb', [[:Telescope buffers]], {})

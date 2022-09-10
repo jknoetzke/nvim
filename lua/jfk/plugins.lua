@@ -38,6 +38,8 @@ return packer.startup(function(use)
   use "sharkdp/fd" 
   use "nvim-treesitter/nvim-treesitter" 
   use "BurntSushi/ripgrep"
+  use "junegunn/fzf.vim"
+  use "junegunn/fzf"
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
