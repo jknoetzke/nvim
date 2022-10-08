@@ -1,3 +1,4 @@
+
 local fn = vim.fn
 
 -- Automatically install packer
@@ -40,10 +41,34 @@ return packer.startup(function(use)
   use "BurntSushi/ripgrep"
   use "junegunn/fzf.vim"
   use "junegunn/fzf"
+  use 'williamboman/mason.nvim'    
+  use 'williamboman/mason-lspconfig.nvim'
+   
+  use 'neovim/nvim-lspconfig' 
+  use 'simrat39/rust-tools.nvim'
 
-  -- Telescope
+  -- Completion framework:
+  use 'hrsh7th/nvim-cmp' 
+
+  -- LSP completion source:
+  use 'hrsh7th/cmp-nvim-lsp'
+
+  -- Useful completion sources:
+  use 'hrsh7th/cmp-nvim-lua'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
+  use 'hrsh7th/cmp-vsnip'                             
+  use 'hrsh7th/cmp-path'                              
+  use 'hrsh7th/cmp-buffer'                            
+  use 'hrsh7th/vim-vsnip' 
+
+  -- Rust Syntax Colours
+  use 'tanvirtin/monokai.nvim'
+  use {'neoclide/coc.nvim', branch = 'release'}
+
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+
+  require("mason").setup()
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
