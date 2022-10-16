@@ -15,3 +15,5 @@ map('', '<leader>qf',
 	'<cmd>lua vim.diagnostic.setqflist({open = false})<cr><cmd>Telescope quickfix<cr>',
 	{ silent = true })
 
+-- Start interactive EasyAlign in visual mode (e.g. vipga)
+map('n', 'ga', [[:EasyAlign]], {})

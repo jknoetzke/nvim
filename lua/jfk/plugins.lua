@@ -1,4 +1,3 @@
-
 local fn = vim.fn
 
 -- Automatically install packer
@@ -47,6 +46,7 @@ return packer.startup(function(use)
   use 'neovim/nvim-lspconfig' 
   use 'simrat39/rust-tools.nvim'
 
+  use 'junegunn/vim-easy-align' --align columns
   -- Completion framework:
   use 'hrsh7th/nvim-cmp' 
 

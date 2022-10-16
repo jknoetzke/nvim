@@ -21,25 +21,6 @@ rt.setup({
   },
 })
 
---local rt = {
---    server = {
---        settings = {
---            on_attach = function(_, bufnr)
---               -- Hover actions
---                vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
---                -- Code action groups
---                vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
---                require 'illuminate'.on_attach(client)
---            end,
---            ["rust-analyzer"] = {
---                checkOnSave = {
---                    command = "clippy"
---                }, 
---            },
---        }
---    },
--- }
-
 require('rust-tools').setup(rt)
 
 -- LSP Diagnostics Options Setup 
@@ -129,7 +110,7 @@ cmp.setup({
 
 -- Treesitter Plugin Setup 
 require('nvim-treesitter.configs').setup {
-  ensure_installed = { "lua", "rust", "toml", "go" },
+  ensure_installed = { "lua", "rust", "toml", "go", "json" },
   auto_install = true,
   highlight = {
     enable = true,
