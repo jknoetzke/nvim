@@ -43,9 +43,12 @@ return packer.startup(function(use)
   use 'williamboman/mason.nvim'    
   use 'williamboman/mason-lspconfig.nvim'
    
-  use 'neovim/nvim-lspconfig' 
+  --RUST 
+  use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
 
+  -- Debugging
+  use 'mfussenegger/nvim-dap'
   use 'junegunn/vim-easy-align' --align columns
   -- Completion framework:
   use 'hrsh7th/nvim-cmp' 
@@ -67,6 +70,8 @@ return packer.startup(function(use)
 
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+
+  use { "ellisonleao/gruvbox.nvim" }
 
   require("mason").setup()
 

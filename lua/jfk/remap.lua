@@ -17,3 +17,4 @@ map('', '<leader>qf',
 
 -- Start interactive EasyAlign in visual mode (e.g. vipga)
 map('n', 'ga', [[:EasyAlign]], {})
+

@@ -19,11 +19,8 @@ set signcolumn=yes
 autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
-require('monokai').setup {}
-require('monokai').setup { palette = require('monokai').pro }
-require('monokai').setup { palette = require('monokai').soda }
-require('monokai').setup { palette = require('monokai').ristretto }
-
+vim.o.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 
 -- :help options
 vim.opt.backup = false                          -- creates a backup file
