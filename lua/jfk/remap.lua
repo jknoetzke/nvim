@@ -1,5 +1,17 @@
 local map = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+local term_opts = { silent = true }
+-- Shorten function name
+--local nnoremap = vim.api.nvim_set_keymap
 
+local nnoremap = require('jfk.keymap').nnoremap
+
+nnoremap("<leader>gs", "<cmd>:Git<CR>");
+nnoremap("<leader>ga", "<cmd>Git fetch --all<CR>");
+
+
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
 
 map('n', 't', [[:TagbarToggle]], {})
 map('n', 'ff', [[:Telescope find_files]], {})

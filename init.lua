@@ -1,6 +1,7 @@
 require "jfk.options"
-require "jfk.remap"
 require "jfk.plugins"
 require "jfk.lsp_config"
 require "jfk.rust"
 require "jfk.coc"
+require "jfk.keymap"
+require "jfk.remap"
