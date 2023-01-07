@@ -9,6 +9,8 @@ local nnoremap = require('jfk.keymap').nnoremap
 nnoremap("<leader>gs", "<cmd>:Git<CR>");
 nnoremap("<leader>ga", "<cmd>Git fetch --all<CR>");
 
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
