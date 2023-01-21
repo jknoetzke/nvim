@@ -46,7 +46,7 @@ return packer.startup(function(use)
   --RUST 
   use 'neovim/nvim-lspconfig'
   use 'simrat39/rust-tools.nvim'
-
+  use 'rust-lang/rust.vim'
   -- Debugging
   use 'mfussenegger/nvim-dap'
   use 'junegunn/vim-easy-align' --align columns
@@ -63,7 +63,7 @@ return packer.startup(function(use)
   use 'hrsh7th/cmp-path'                              
   use 'hrsh7th/cmp-buffer'                            
 
-  -- Rust Syntax Colours
+ -- Rust Syntax Colours
   use 'tanvirtin/monokai.nvim'
   use {'neoclide/coc.nvim', branch = 'release'}
 
@@ -72,7 +72,13 @@ return packer.startup(function(use)
 
   use { "ellisonleao/gruvbox.nvim" }
 
-  require("mason").setup()
+  --Statusbar
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+ require("mason").setup()
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

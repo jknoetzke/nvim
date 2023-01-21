@@ -16,7 +16,6 @@ rt.setup({
   },
 })
 
-
 -- Treesitter Plugin Setup 
 require('nvim-treesitter.configs').setup {
   ensure_installed = { "lua", "rust", "toml", "go", "json" },
