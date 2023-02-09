@@ -1,3 +1,4 @@
+vim.opt.clipboard = unnamedplus
 
 -- For RUST
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
