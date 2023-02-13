@@ -10,11 +10,12 @@ return {
     config = function()
       require("fidget").setup()
       require("mason-lspconfig").setup({
-        ensure_installed = { "sumneko_lua" },
+        ensure_installed = { "lua_ls" },
       })
       -- lazy load null-ls
       require("null-ls")
       require("lsp")
     end
-  }
+  },
+
 }
