@@ -59,12 +59,12 @@ end)
 
 augroup('ActiveWinCursorLine', function(g)
   -- Highlight current line only on focused window
-  aucmd("WinEnter,BufEnter,InsertLeave", {
+  aucmd({"WinEnter", "BufEnter" , "InsertLeave"} , {
     group = g,
     pattern = '*',
     command = 'if ! &cursorline && ! &pvw | setlocal cursorline | endif'
   })
-  aucmd("WinLeave,BufLeave,InsertEnter", {
+  aucmd({"WinLeave", "BufLeave", "InsertEnter" }, {
     group = g,
     pattern = '*',
     command = 'if &cursorline && ! &pvw | setlocal nocursorline | endif'
@@ -73,7 +73,7 @@ end)
 
 -- auto-delete fugitive buffers
 augroup('Fugitive', function(g)
-  aucmd("BufReadPost,", {
+  aucmd({"BufReadPost"}, {
     group = g,
     pattern = 'fugitive://*',
     command = 'set bufhidden=delete'
